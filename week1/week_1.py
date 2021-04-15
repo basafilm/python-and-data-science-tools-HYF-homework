@@ -12,7 +12,7 @@ print(f'{my_movie_list["name"]}')
 
 # Write a Python program to display the first and last colors from the following list.
 color_list = ["Red", "Green", "White", "Black"]
-print(f'The first color is {color_list[0]} and the last color is {color_list[3]}')
+print(f'The first color is {color_list[0]} and the last color is {color_list[-1]}')
 
 # Write a Python script to add a key to a dictionary
 
@@ -24,19 +24,19 @@ print(numbers)
 # Write a Python program to calculate body mass index.
 weight = 71
 height = 1.73
-BMI = weight / height
+BMI = weight / (height * height)
 print(round(BMI, 2))
 
 # Additional Exercises:
 
 # copied!
-target_num, guess_num = random.randint(1, 10), 0
-while target_num != guess_num:
-    guess_num = int(input('Guess a number between 1 and 10 until you get it right : '))
-print('Well guessed!')
+# target_num, guess_num = random.randint(1, 10), 0
+# while target_num != guess_num:
+#     guess_num = int(input('Guess a number between 1 and 10 until you get it right : '))
+# print('Well guessed!')
 
 # Create a list of 5 city names and convert it into tuples.
-tuples_test = ['string', 47, 4.7, True]
+tuples_test = ('string', 47, 4.7, True)
 data_type = list(map(type, tuples_test))
 print("The data types are : " + str(data_type))
 
@@ -49,17 +49,20 @@ print(tuple(city_name))
 
 
 a = [10, 20, 30, 20, 10, 50, 60, 40, 80, 50, 40]
-a = list(dict.fromkeys(a))
+a = set(a)
 print(a)
 
 
 # Accept a string from user and remove the characters which have odd index values of a given string and print them.
-def odds(input):
+
+
+def odds(input_word):
     result = ""
-    for i in range(len(input)):
+    for i, sample_int in enumerate(input_word):
         if i % 2 == 0:
-            result: Union[input, Any] = result + input[i]
+            result += input_word[i]
     return result
 
 
 print(odds(input("Inter something to get back odds: ")))
+
