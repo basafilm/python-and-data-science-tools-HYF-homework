@@ -54,3 +54,28 @@ class Person:
 person1 = Person("Malek", "Jan")
 person1.print_name()
 
+while True:
+    try:
+        int(input("Please enter name: "))
+        break
+    except ValueError:
+        print("Invalid! your name should be number!")
+print("Right naming!")
+
+
+class Student:
+    pass
+
+
+class Marks:
+    pass
+
+
+s = Student()
+m = Marks()
+print(isinstance(s, Student))
+print(isinstance(m, Student))
+print(isinstance(m, Marks))
+print(isinstance(s, Marks))
+print(issubclass(Student, object))
+print(issubclass(Marks, object))
