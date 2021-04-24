@@ -41,3 +41,16 @@ def show_numbers(limit):
 
 show_numbers(int(input()))
 
+
+class Person:
+    def __init__(self, first_name, last_name):
+        self.firstname = first_name
+        self.lastname = last_name
+
+    def print_name(self):
+        print(self.firstname, self.lastname)
+
+
+person1 = Person("Malek", "Jan")
+person1.print_name()
+
